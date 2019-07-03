@@ -27,7 +27,7 @@ public abstract class GraphQLController<R> {
     }
 
     @PostMapping(
-            value = "${graphql.spqr.http.endpoint:/graphql}",
+            value = "${graphql.spqr.http.endpoint}",
             consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_JSON_VALUE},
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE
     )
@@ -43,7 +43,7 @@ public abstract class GraphQLController<R> {
     }
 
     @PostMapping(
-            value = "${graphql.spqr.http.endpoint:/graphql}",
+            value = "${graphql.spqr.http.endpoint}",
             consumes = {"application/graphql", "application/graphql;charset=UTF-8"},
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE
     )
@@ -57,7 +57,7 @@ public abstract class GraphQLController<R> {
 
     @RequestMapping(
             method = RequestMethod.POST,
-            value = "${graphql.spqr.http.endpoint:/graphql}",
+            value = "${graphql.spqr.http.endpoint}",
             consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE, "application/x-www-form-urlencoded;charset=UTF-8"},
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE
     )
